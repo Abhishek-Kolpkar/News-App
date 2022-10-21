@@ -1,12 +1,13 @@
 import React from "react";
 import "../components/comment.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark, faCommentDots } from "@fortawesome/free-solid-svg-icons";
 
 const CommentLists = (props) => {
   return (
     <>
       <li className="todolist_style">
+        <FontAwesomeIcon icon={faCommentDots} className="comment-icon"></FontAwesomeIcon>
         <span id="text">{props.text}</span>
         <button
           onClick={() => {

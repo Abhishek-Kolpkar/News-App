@@ -18,8 +18,6 @@ const Comment = () => {
   };
 
   const deleteItems = (id) => {
-    alert("Delete comment?");
-
     setItems((prevItems) => {
       return prevItems.filter((arrElem, index) => {
         return index !== id;

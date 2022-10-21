@@ -1,13 +1,13 @@
 .main_div{
   width: 100%;
-  margin: 1rem 0 2rem;
+  margin: 5px 0 1rem;
 }
 
 .add-comment{
   width: 100%;
   margin-bottom: 10px;
+  padding: 8px 0 8px 16px;
 }
-
 
 
 .inputText{
@@ -22,9 +22,13 @@
 
 .comment{
   border: none;
+  outline: none;
   background: inherit;
   font-size: 16px;
-  color: darkcyan;
+  background-color: dimgray;
+  padding: 8px 16px;
+  color: honeydew;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -32,8 +36,6 @@
 ol{
   width: 100%;
   list-style: none;
-  height: 80px;
-  overflow-y: auto;
 }
 
 
@@ -42,7 +44,11 @@ ol{
   margin-bottom: 8px;
   padding: 5px;
   position: relative;
-  border: 1px solid palegoldenrod;
+}
+
+.todolist_style .comment-icon{
+  margin-right: 10px;
+  color: cornflowerblue;
 }
 
 .todolist_style span{

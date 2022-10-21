@@ -1,19 +1,25 @@
-.SearchBar {
+.news-serach-section {
+  width: 100%;
+  text-align: center;
   background-color: rgb(230, 230, 230);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.SearchBar{
+  width: 40%;
+  margin: auto;
+  position: relative;
 }
 
 #NewsSearch {
-  margin: 1rem;
+  width: 100%;
+  margin: 8px 0;
+  font-size: 18px;
   border-radius: 5px;
-  border-style: none;
-  text-align: center;
-  padding: 1rem;
-  width: 50%;
-  border-style: double;
+  border: none;
+  text-align: left;
+  padding: 1rem 3.5rem 1rem 1rem;
   position: relative;
+  outline: none;
 }
 
 .source {
@@ -21,10 +27,12 @@
 }
 .search {
   position: absolute;
-  left: 45%;
+  right: 15px;
+  top: 33%;
   border: none;
+  background: inherit;
+  font-size: 20px;
 }
-
 
 .load{
   font-size: 32px;
@@ -34,36 +42,55 @@
 }
 
 
-.news{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 
 #cardMain {
-  width: 40%;
-  padding: 2rem;
+  width: 100%;
+  padding: 1.5rem 2rem 0;
   margin: 10px 10px 40px;
   background-color: whitesmoke;
   border-radius: 2rem;
   border: 2px solid silver;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  display: inline-block;
 }
 
-.titleMain {
-  font-weight: bold;
-}
-
-.imgMain, .news-details {
+.news-content{
   width: 100%;
-  margin: 10px 0;
+  display: flex;
+  gap: 20px;
 }
 
+.news-content .left{
+  flex-basis: 40%;
+}
+
+.news-content .right{
+  flex-basis: 60%;
+  border-bottom: 1px solid grey;
+}
+
+.left .imgMain{
+  width: 100%;
+  height: 100%;
+}
+
+
+.right .titleMain {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 .author {
-  font-weight: bold;
+  font-weight: 500;
+}
+
+.right .news-details {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.right .Readremove{
+  margin-bottom: 8px;
 }
 
 .ReadMore {
@@ -81,4 +108,12 @@
 }
 
 
+.comment-section{
+  width: 80%;
+  margin-top: 20px;
+}
+
+.comment-section h3{
+  color: rebeccapurple;
+}
 
