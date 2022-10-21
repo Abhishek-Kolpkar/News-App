@@ -1,28 +1,17 @@
 import "../pages/home.css";
 import React, { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import LikeFeature from "../components/LikeFeature";
+import Comment from "../components/Comment"
 
 function Home() {
   const [myData, setMyData] = useState([]);
   const [search, setSearch] = useState("");
   const [filteredData, setFilteredData] = useState([]);
-  // const [myStyle, setMyStyle] = useState({ backgroundColor: "black" });
   const [isLoaded, setIsLoaded] = useState(true);
 
-  // const toggleStyle = () => {
-  //   console.log("theme changer");
-  //   if (myStyle.backgroundColor == "white") {
-  //     setMyStyle({
-  //       backgroundColor: "black",
-  //     });
-  //   } else {
-  //     setMyStyle({
-  //       backgroundColor: "white",
-  //     });
-  //   }
-  // };
 
   const NewsDetails = async () => {
     const res = await axios.get(
@@ -38,14 +27,11 @@ function Home() {
 
   // remove article============>
   const removeArticle = (id) => {
-    alert('News deleted');
-
     let filterData = myData.filter((item) => item.url !== id);
     setFilteredData(filterData);
   };
 
   // filtering data============>
-
   useEffect(() => {
     const afterFilterData = myData.filter((post) => {
       if (post.title) {
@@ -58,7 +44,6 @@ function Home() {
 
   return (
     <>
-      <toggleStyle />
       <main>
         <div className="SearchBar">
           <input
@@ -71,52 +56,46 @@ function Home() {
           <button className="search">
             <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
           </button>
-          {/* <div className="changeTheme">
-            <FontAwesomeIcon
-              onClick={toggleStyle}
-              icon={faSun}
-            ></FontAwesomeIcon>
-          </div> */}
         </div>
-          <div className="load">{isLoaded ? "Loading......" : null}</div>
-          {filteredData.map((currData) => {
-            return (
-              <>
-                <section className="container flex">
-                  <div id="cardMain">
-                    <h2 className="titleMain">{currData.title}</h2>
-                    <img
-                      className="imgMain"
-                      src={currData.urlToImage}
-                      alt="image not available"
-                    />
-                    <p className="author">
-                      <span className="by">By</span> {currData.author} |{" "}
-                      <span>{currData.publishedAt}</span>
-                    </p>
-                    <div className="news-details">
-                      <p className="content"> {currData.content}</p>
-                      <p className="desc">{currData.description}</p>
-                      <p className="source">Source: {currData.source.name}</p>
-                    </div>
-                    <div className="likeFeature">{/* <LikeFeature /> */}</div>
-                    <div className="Comment flex">{/* <CommentApp /> */}</div>
-                    <div className="Readremove flex">
-                      <a className="ReadMore" href={currData.url}>
-                        Read more...
-                      </a>
-                      <a
-                        className="remove"
-                        onClick={() => removeArticle(currData.url)}
-                      >
-                        Remove
-                      </a>
-                    </div>
+        <div className="load">{isLoaded ? "Loading..." : null}</div>
+        <section className="container news">
+        {filteredData.map((currData) => {
+          return (
+            <>
+                <div id="cardMain">
+                  <h2 className="titleMain">{currData.title}</h2>
+                  <img
+                    className="imgMain"
+                    src={currData.urlToImage}
+                    alt="image not available"
+                  />
+                  <p className="author">
+                    <span className="by">By</span> {currData.author} |{" "}
+                    <span>{currData.publishedAt}</span>
+                  </p>
+                  <div className="news-details">
+                    <p className="content"> {currData.content}</p>
+                    <p className="desc">{currData.description}</p>
+                    <p className="source">Source: {currData.source.name}</p>
                   </div>
-                </section>
-              </>
-            );
-          })}
+                  <div className="likeDislike"><LikeFeature/></div>
+                  <div className="Comment flex"><Comment/></div>
+                  <div className="Readremove flex">
+                    <a className="ReadMore" href={currData.url}>
+                      Read more...
+                    </a>
+                    <a
+                      className="remove"
+                      onClick={() => removeArticle(currData.url)}
+                    >
+                      Remove
+                    </a>
+                  </div>
+                </div>
+            </>
+          );
+        })}
+        </section>
       </main>
     </>
   );

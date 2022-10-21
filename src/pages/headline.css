@@ -1,0 +1,44 @@
+.cardHead{
+  width: 100%;
+  margin: 20px 0;
+  padding: 8px 16px;
+  background-color:rgb(131, 131, 131);
+  color: white;
+  border-radius: 10px;
+}
+
+.main-title{
+  display: inline-flex;
+}
+
+
+.icon{
+  font-size: 24px;
+  color: magenta;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+
+#titleH{
+  color: honeydew;
+  font-weight: 600;
+}
+
+.block{
+  display: block;
+}
+
+.none{
+  display: none;
+}
+
+#url{
+  width: 150px;
+  font-size: medium;
+  text-decoration: none;
+  display: block;
+  color: gainsboro;
+  padding: 10px 16px;
+  margin-left: 20px;
+}
+

@@ -1,0 +1,59 @@
+.main_div{
+  width: 100%;
+  margin: 1rem 0 2rem;
+}
+
+.add-comment{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+.inputText{
+  width: 75%;
+  margin-right: 15px;
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  padding: 8px 16px;
+  font-size: 16px
+}
+
+.comment{
+  border: none;
+  background: inherit;
+  font-size: 16px;
+  color: darkcyan;
+  cursor: pointer;
+}
+
+
+ol{
+  width: 100%;
+  list-style: none;
+  height: 80px;
+  overflow-y: auto;
+}
+
+
+.todolist_style{
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 5px;
+  position: relative;
+  border: 1px solid palegoldenrod;
+}
+
+.todolist_style span{
+  word-wrap: break-word;
+}
+
+
+.delete{
+  font-size: 18px;
+  position: absolute;
+  right: 5px;
+  color: rgb(224, 15, 15);
+  margin-left: 15px;
+}

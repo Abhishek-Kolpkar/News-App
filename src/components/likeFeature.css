@@ -1,0 +1,19 @@
+.likeDeslike{
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.likeDeslike div{
+  align-self: center;
+}
+
+
+.likeDeslike div .icons{
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}

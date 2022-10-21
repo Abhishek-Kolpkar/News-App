@@ -16,9 +16,17 @@ nav{
   list-style: none;
 }
 
+.logo img{
+  width: 50px;
+  margin-right: 10px;
+}
+
 .logo .logo-title{
   text-decoration: none;
-  color: deeppink;
+  color: aqua;
+  align-self: center;
+  display: flex;
+  align-items: center;
 }
 
 

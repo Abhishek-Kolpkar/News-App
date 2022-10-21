@@ -25,7 +25,10 @@ export default function Header() {
     <header>
       <nav className="container">
           <div className="logo">
-            <CustomLink className="logo-title" to="/">NT News</CustomLink>
+            <CustomLink className="logo-title" to="/">
+              <img src="https://www.shareicon.net/data/2015/10/10/653798_logo_512x512.png" alt="" />
+              <p>NT News</p>
+            </CustomLink>
           </div>
           <ul>
             <li>
